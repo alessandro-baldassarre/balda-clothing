@@ -8,9 +8,9 @@ import { Elements } from "@stripe/react-stripe-js";
 import App from "./App";
 import { persistor, store } from "./store/store";
 
-import "./index.scss";
 import { PersistGate } from "redux-persist/integration/react";
 import { stripePromise } from "./utils/stripe/stripe.utils";
+import { Globalstyle } from "./global.styles";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,6 +19,7 @@ root.render(
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
           <Elements stripe={stripePromise}>
+            <Globalstyle />
             <App />
           </Elements>
         </BrowserRouter>
