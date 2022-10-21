@@ -7,7 +7,7 @@ import { CategoryItem } from "../../store/categories/category.types";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 import {
-  ProductCardContainer,
+  ProductCartContainer,
   Footer,
   Name,
   Price,
@@ -24,7 +24,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
 
   const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
   return (
-    <ProductCardContainer>
+    <ProductCartContainer>
       <img src={imageUrl} alt={name} />
       <Footer>
         <Name>{name}</Name>
@@ -36,7 +36,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
       >
         Add to Card
       </Button>
-    </ProductCardContainer>
+    </ProductCartContainer>
   );
 };
 
